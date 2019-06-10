@@ -81,6 +81,7 @@ class TestInt{
 		String str = sc.next();
 		int a = Integer.parseInt(str);
 		Integer i = new Integer(str);
+		Integer i1 = Integer.valueOf(str);
 		int b = i.intValue();
 		System.out.println(a);
 		System.out.println(b);
@@ -151,7 +152,72 @@ class TestLamp{
 	}
 }
 //第11题
+class TestEmail{
+	public static void main(String[] args){
+		String email = "zhengcg@zparkhr.com";
+		String s = "zhengcg";
+		if(email.contains(s)){
+			s = "zhengcg";
+			System.out.println(s);
+		}
+		else System.out.println("没有该用户名");
+	}
+}
 //第12题
+class TestEmail1{
+	public static void main(String[] args){
+		String email = "zhengcg@zparkhr.com";
+		if(email.contains("@") && email.contains(".")){
+			if(email.lastIndexOf(".") > email.lastIndexOf("@")){
+				System.out.println("合法");
+			}
+			else System.out.println("不合法");
+		}
+		else System.out.println("不合法");
+	}
+}
 //第13题
+class TestUUID{
+	public static void main(String[] args){
+		String u = UUID.randomUUID().toString();
+		String[] a = u.split("-");
+		String b = "";
+		for(int i = 0;i<a.length;i++){
+			b+=a[i];
+		}
+		System.out.println(b);
+	}
+}
 //第14题
+class TestRandom{
+	public static void main(String[] args){
+		Random random = new Random();
+		String str = "ABCDEFGhijklmn1234567";
+		char[] s = str.toCharArray();
+		StringBuilder sb = new StringBuilder();
+		for(int i = 0;i<4;i++){
+			int a = random.nextInt(s.length);
+			sb.append(s[a]);
+		}
+		String b;
+		b = sb.toString();
+		System.out.println(b);
+	}
+}
 //第15题
+class CountNumber{
+	public static void main(String[] args){
+		String str = "1239586838923173478943890234092";
+		char[] a = str.toCharArray();
+		for(int i = 0;i<10;i++){
+			int count = 0;
+			for(int j = 0;j<a.length;j++){
+				if(a[j]-'0' == i){
+					count++;
+				}
+			
+			}
+			System.out.println(i+"出现了："+count+"次");
+		}
+	}
+}
