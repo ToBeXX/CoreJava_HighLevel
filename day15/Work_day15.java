@@ -1,4 +1,4 @@
-package day14;
+package day15;
 import java.util.*;
 //第一题
 /*在Object类中，定义的finalize方法在垃圾回收时调用，toString()方法返回值表示该对象的String形式
@@ -98,7 +98,7 @@ class Student1{
 	}
 	class TestStudent1{
 		public void main(String[] args){
-			Student1 stu1 = new Student1("Tom",18);
+			Student stu1 = new Student("Tom",18);
 			System.out.println(stu1+""+100);
 		}
 	}
