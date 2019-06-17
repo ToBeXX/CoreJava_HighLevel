@@ -50,6 +50,7 @@ class MyStack1{
 			index++;
 			print();
 			empty.signalAll();
+			
 		}finally{
 			lock.unlock();
 		}

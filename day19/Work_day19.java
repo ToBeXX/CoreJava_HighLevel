@@ -222,7 +222,7 @@ class TestMyException{
 	}
 }
 //µÚ19Ìâ
-class MyException extends ArithmeticException{}
+class MyException extends Exception{}
 class TestExcrption{
 	public static void main(String[] args){
 		ma();
@@ -230,15 +230,16 @@ class TestExcrption{
 	public static int ma(){
 		try {
 			m();
+			return 100;
 		}catch(ArithmeticException e){
 			System.out.println("ArithmeticException");
+			return 10;
 		}catch(Exception e){
 			System.out.println("Exception");
-		}finally{
-			return 100;
+			return 1;
 		}
 	}
-	public static void m(){
+	public static void m()throws MyException{
 		throw new MyException();
 	}
 }
