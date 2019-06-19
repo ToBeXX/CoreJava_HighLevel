@@ -16,8 +16,9 @@ public class TestLockNumberChar {
 					lock.lock();
 					for(char c = 'A'; c<='Z';c++){
 						System.out.println(c);
+						c1.signalAll();
 							try {
-								c1.signalAll();
+								if(c!='Z')
 								c1.await();
 							} catch (InterruptedException e) {
 								// TODO Auto-generated catch block
@@ -35,8 +36,9 @@ public class TestLockNumberChar {
 				lock.lock();
 				for(int i = 1;i<=26;i++){
 					System.out.println(i);
+					c1.signalAll();
 						try {
-							c1.signalAll();
+							if(i!=26)
 							c1.await();
 						} catch (InterruptedException e) {
 							// TODO Auto-generated catch block
