@@ -10,7 +10,7 @@ public class TestList {
 		list.add("zhuazhua");
 		list.add("piapia");
 		list.add("xixi");
-		list.add("haha");
+		list.add("haha");                          
 		// Ôö
 		list.add(2, "xuxu");
 		for (String str : list) {
