@@ -17,6 +17,7 @@ public class TestSemaphore {
 		class Task implements Runnable{
 			public void run() {
 				try {
+//					获取信号量
 					s.acquire();
 				} catch (InterruptedException e1) {
 					// TODO Auto-generated catch block
@@ -35,6 +36,7 @@ public class TestSemaphore {
 						}
 						System.out.println(Thread.currentThread().getName()+" exited "+room.getName());
 						room.setBoolean(true);
+//						释放信号量
 						s.release();
 						return;
 					}

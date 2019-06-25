@@ -28,7 +28,6 @@ class JudgeMax extends RecursiveTask<Integer>{
 		this.start = start;
 		this.end = end;
 	}
-
 	@Override
 	protected Integer compute() {
 		if(end-start <= THRESHOLD){
